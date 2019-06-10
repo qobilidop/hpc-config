@@ -11,8 +11,7 @@ set -e
 BIN=hello_omp
 
 # reset module
-module purge
-module load intel openmpi_ib
+source ./module_reset.sh
 
 # compile
 icc -openmp -o "$BIN" code/"$BIN".c
