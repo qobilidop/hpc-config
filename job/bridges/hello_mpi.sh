@@ -12,8 +12,8 @@ source ./module_reset.sh
 BIN=hello_mpi
 
 # compile
-mpiicc -mt_mpi -o "$BIN" code/"$BIN".c
+mpiicc -o "$BIN" code/"$BIN".c
 
 # run
 export  I_MPI_JOB_RESPECT_PROCESS_PLACEMENT=0
-mpirun -n "$SLURM_NTASKS" -ppn "$SLURM_NTASKS_PER_NODE" ./"$BIN"
+mpirun -ppn "$SLURM_NTASKS_PER_NODE" ./"$BIN"

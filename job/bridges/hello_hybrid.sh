@@ -17,4 +17,4 @@ mpiicc -qopenmp -mt_mpi -o "$BIN" code/"$BIN".c
 
 # run
 export I_MPI_JOB_RESPECT_PROCESS_PLACEMENT=0
-mpirun -n "$SLURM_NTASKS" -ppn "$SLURM_NTASKS_PER_NODE" -genv OMP_NUM_THREADS="$SLURM_CPUS_PER_TASK" -genv I_MPI_PIN_DOMAIN=omp ./"$BIN"
+mpirun -ppn "$SLURM_NTASKS_PER_NODE" -genv OMP_NUM_THREADS="$SLURM_CPUS_PER_TASK" -genv I_MPI_PIN_DOMAIN=omp ./"$BIN"
