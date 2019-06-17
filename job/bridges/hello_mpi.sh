@@ -6,6 +6,8 @@
 #SBATCH -t 00:10:00
 #SBATCH -o hello_mpi.log
 #SBATCH -D .
+
+
 set -e
 source ./module_reset.sh
 
