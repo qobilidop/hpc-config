@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --job-name="hello_mpi"
 #SBATCH --output="hello_mpi.log"
-#SBATCH --partition=compute
+#SBATCH --partition=debug
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=24
 #SBATCH --export=ALL
