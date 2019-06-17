@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#SBATCH -A csd453
 #SBATCH --job-name="hello_mpi"
 #SBATCH --output="hello_mpi.log"
 #SBATCH --partition=compute

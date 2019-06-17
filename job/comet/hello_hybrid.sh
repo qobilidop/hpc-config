@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#SBATCH -A csd453
 #SBATCH --job-name="hello_hybrid"
 #SBATCH --output="hello_hybrid.log"
 #SBATCH --partition=debug

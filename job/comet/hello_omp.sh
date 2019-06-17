@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#SBATCH -A csd453
 #SBATCH --job-name="hello_omp"
 #SBATCH --output="hello_omp.log"
 #SBATCH --partition=compute
