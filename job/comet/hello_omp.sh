@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --job-name="hello_omp"
 #SBATCH --output="hello_omp.log"
-#SBATCH --partition=compute
+#SBATCH --partition=debug
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=24
 #SBATCH --export=ALL
