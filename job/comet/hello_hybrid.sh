@@ -9,7 +9,7 @@
 #SBATCH -t 00:10:00
 
 # note that comet doesn't play nice with cpus-per-task, so you
-# you have to ask for all the cores on a node and then set the 
+# have to ask for all the cores on a node and then set the 
 # npernode to ntasks-per-node/OMP_NUM_THREADS
 
 set -e
@@ -21,6 +21,5 @@ BIN=hello_hybrid
 mpicc -openmp -o "$BIN" code/"$BIN".c
 
 # run
-export I_MPI_JOB_RESPECT_PROCESS_PLACEMENT=0
 export OMP_NUM_THREADS=2 
 ibrun --npernode 12 ./"$BIN"
